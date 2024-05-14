@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always-Music</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <main class="container w-50">
+
+        <h1 class="text-center my-2">Academia Always Music</h1>
+
+        <form id="formAgregarEstudiante" class="border rounded p-4 my-3">
+            <h3 class="text-center mb-3"> Agregar Estudiante</h3>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Nombre</label>
+
+                <div class="col-sm-10">
+                    <input id="nombre" type="text" class="form-control" name="nombre" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Rut</label>
+
+                <div class="col-sm-10">
+                    <input id="rut" type="text" class="form-control" name="rut" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Curso</label>
+
+                <div class="col-sm-10">
+                    <input id="curso" type="text" class="form-control" name="curso" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Nivel</label>
+
+                <div class="col-sm-10">
+                    <input id="nivel" type="text" class="form-control" name="nivel" />
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+        </form>
+
+        <h3 class="text-center">Listado de Estudiantes</h3>
+
+        <ul id="listaEstudiantes" class="list-group">
+            <!-- <li class="list-group-item">
+                 nombre-libro
+                <button onclick="eliminarLibro()" class="btn btn-danger btn-sm">Eliminar</button>
+                <button onclick="editarLibro()" class="btn btn-info btn-sm">Editar</button>
+            </li> -->
+        </ul>
+    </main>
+
+    <!-- Modal -->
+    <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Estudiante</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarEstudiante" class="border rounded p-4 my-3">
+                        <div class="form-group row">
+                            <input id="idStudent" type="text" name="idStudent" hidden />
+                            <label class="col-sm-2 col-form-label">Nombre</label>
+
+                            <div class="col-sm-10">
+                                <input id="nombre" type="text" class="form-control" name="nombre" required />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Rut</label>
+
+                            <div class="col-sm-10">
+                                <input id="rut" type="text" class="form-control" name="rut" required />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Curso</label>
+
+                            <div class="col-sm-10">
+                                <input id="curso" type="text" class="form-control" name="curso" required />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nivel</label>
+
+                            <div class="col-sm-10">
+                                <input id="nivel" type="text" class="form-control" name="nivel" required />
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+        integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

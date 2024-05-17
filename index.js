@@ -1,4 +1,5 @@
 import express from 'express'
+import 'dotenv/config'
 import cors from 'cors'
 import routeStudent from './routes/student.route.js'
 
